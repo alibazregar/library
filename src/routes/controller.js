@@ -3,7 +3,7 @@ const {validationResult} = require('express-validator')
 const User = require('./../models/user')
 const Book = require('./../models/book')
  
-module.exports = new class{
+module.exports =  class{
 
     constructor(){
         this.User = User

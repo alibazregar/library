@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
     lastName: {type:String,trim:true},
     admin:{type:Boolean,trim:true,default:false},
     password:{type:String,trim:true, required:true},
-    email:{type:String,trim:true,lowercase:true},
+    email:{type:String,trim:true,lowercase:true,required:true},
     books : [{type:mongoose.Schema.Types.ObjectId,
       ref: 'Book'
     }]

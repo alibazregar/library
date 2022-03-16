@@ -12,14 +12,14 @@ app.use(express.urlencoded({ extended:true }))
 app.use(express.static('public'))
 
 //winston
-process.on('uncaughtException', (ex)=>{
+/*process.on('uncaughtException', (ex)=>{
   winston.error(ex.message,ex);
 })
 process.on('unhandledRejection', (ex)=>{
   winston.error(ex.message,ex);
 })
 
-winston.add(new winston.transports.File({filename: 'logFile.log'}))
+winston.add(new winston.transports.File({filename: 'logFile.log'}))*/
 //route
 app.use('/api/v1/',require('./src/routes'))
 
