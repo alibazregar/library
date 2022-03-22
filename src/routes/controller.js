@@ -6,11 +6,12 @@ const Book = require('./../models/book')
 module.exports =  class{
 
     constructor(){
+        autoBind(this)
         this.User = User
         this.Book = Book
     }
     //find all validation errors
-    validationBody(req,res) {
+    validationBody(req,res){
       const result = validationResult(req)
       if(!result.isEmpty()){
           const errors = result.array()
@@ -30,7 +31,7 @@ module.exports =  class{
         next()
     }
     //for this.response
-    response({res,message,code=200,data:{}}){
+    response({res,message,code=200,data={}}){
         res.status(code).send({data,message})
     }
 

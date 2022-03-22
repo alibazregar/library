@@ -5,6 +5,7 @@ const error = require('./../middleware/error')
 
 //auth route
 router.use('/auth', require('./auth'))
+router.use('/forget-password',require('./forget-password'))
 
 
 

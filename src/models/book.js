@@ -9,5 +9,5 @@ const bookSchema = new mongoose.Schema({
    
 
 })
-
+bookSchema.plugin(timeStamps)
 module.exports = mongoose.model("Book",bookSchema)

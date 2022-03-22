@@ -1,15 +1,15 @@
 const {check} = require('express-validator')
-module.exports = new class{
+module.exports = new class {
     register(){
         return[
             check('firstName')
-            .isEmpty()
             .not()
+            .isEmpty()
             .withMessage('first name  is empty'),
 
             check('lastName')
-            .isEmpty()
             .not()
+            .isEmpty()
             .withMessage('last name is empty'),
 
             check('email')
@@ -17,6 +17,8 @@ module.exports = new class{
             .withMessage('invalid email'),
             
             check('password')
+            .not()
+            .isEmpty()
             .isLength({ min: 5 })
             .withMessage('password is too short')
             
