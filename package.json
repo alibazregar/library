@@ -21,6 +21,7 @@
     "lodash": "^4.17.21",
     "mongoose": "^6.2.6",
     "mongoose-timestamp": "^0.6.0",
+    "nodemailer": "^6.7.3",
     "winston": "^3.6.0"
   }
 }

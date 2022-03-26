@@ -19,6 +19,12 @@ module.exports = new class{
             check('password')
             .isLength({ min: 5 })
             .withMessage('invalid password'),
+           
+            check('checkPassword')
+            .isLength({ min: 5 })
+            .withMessage('invalid password'),
+            
+            
         ]
     }
 
